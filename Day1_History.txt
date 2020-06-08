@@ -214,3 +214,49 @@
   214  git add . ; git commit -m "DockerFile" ; git push 
   215  ls
   216  history > Day1_History.txt
+  217  git add . ; git commit -m "DockerFile" ; git push 
+  218  ls
+  219  cd 01-Docker/
+  220  ls
+  221  cd 
+  222  ls
+  223  cd ..
+  224  ls
+  225  cd 
+  226  ls
+  227  cd k8s-docker-vmware-08-June-2020/
+  228  ls
+  229  cd 01-Docker/
+  230  ls
+  231  cd 02-DockerFile/
+  232  ls
+  233  curl localhost:8080
+  234  ls
+  235  cp -rf apache apache_v2
+  236  ls
+  237  cd apache_v2/
+  238  ls
+  239  vim info.html
+  240  ls
+  241  vim Dockerfile 
+  242  ls
+  243  docker build -t  ubuntu-apache-image:v2 -f Dockerfile .
+  244  docker images
+  245  docker run -d -p 8082:80 ubuntu-apache-image:v2
+  246  docker ps 
+  247  docker run -d -P  ubuntu-apache-image:v2
+  248  docker ps 
+  249  docker run -d -P  ubuntu-apache-image:v1
+  250  docker ps 
+  251  ls
+  252  vi Dockerfile 
+  253  ls
+  254  vim info.html 
+  255  docker build -t  ubuntu-apache-image:v3 -f Dockerfile .
+  256  docker run -d -P  ubuntu-apache-image:v3
+  257  docker ps 
+  258  ls
+  259  cd ..
+  260  ls
+  261  cd ..
+  262  history > Day1_History.txt 
