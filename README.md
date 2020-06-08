@@ -1,1 +1,1 @@
-# k8s-docker-vmware-08-June-2020
+# Demo Repo for Docker & Kuberneties. 
