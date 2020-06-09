@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "installing docker"
+echo "Installing docker"
 apt-get update
 apt-get install -y \
     apt-transport-https \
@@ -11,7 +11,7 @@ add-apt-repository \
    "deb https://download.docker.com/linux/$(. /etc/os-release; echo "$ID") \
    $(lsb_release -cs) \
    stable"
-apt-get update && apt-get install -y docker-ce=$(apt-cache madison docker-ce | grep 17.03 | head -1 | awk '{print $3}')
+apt-get update && apt-get install -y docker-ce
 
 echo "installing kubeadm and kubectl"
 apt-get update && apt-get install -y apt-transport-https
@@ -20,4 +20,4 @@ cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get update
-apt-get install -y kubelet=1.13.5-00 kubeadm=1.13.5-00 kubectl=1.13.5-00
+apt-get install -y  kubelet=1.18.0-00 kubeadm=1.18.0-00 kubectl=1.18.0-00
