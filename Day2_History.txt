@@ -433,3 +433,72 @@
   433  cd ..
   434  ls
   435  history > Day2_History.txt
+  436  git add . ; git commit -m "First Pod"; git push 
+  437  kubectl get pods 
+  438  ls
+  439  cat Day2_History.txt 
+  440  kubectl get nodes -o wide 
+  441  kubectl get pods 
+  442  kubectl delete pod nodehelloworld
+  443  kubectl get pods 
+  444  ls
+  445  git pull
+  446  ls
+  447  kubectl get ns 
+  448  ls
+  449  kubectl create -f 02-K8s/02-First-App/helloworld.yml 
+  450  kubectl get pods --all-namespaces
+  451  ls
+  452  cd 02-K8s/
+  453  ls
+  454  cd 03-Replication-controller/
+  455  ls
+  456  vim helloworld-repl-controller.yml 
+  457  ls
+  458  rm 1
+  459  vim helloworld-repl-controller.yml 
+  460  ls
+  461  kubectl create -f helloworld-repl-controller.yml 
+  462  kubectl get pods 
+  463  kubectl get rc
+  464  kubectl describe rc 
+  465  kubectl describe pod helloworld-controller-p6jsz
+  466  kubectl get rc
+  467  kubectl describe rc 
+  468  ls
+  469  cat helloworld-repl-controller.yml 
+  470  ls
+  471  kubectl get pods 
+  472  kubectl describe pod nodehelloworld
+  473  kubectl get pods 
+  474  kubectl desribe pods  helloworld-controller-kp44d
+  475  kubectl describe pods  helloworld-controller-kp44d
+  476  ls
+  477  kubectl get pods 
+  478  kubectl get rc 
+  479  kubectl scale --replicas=1 rc helloworld-controller
+  480  kubectl get rc 
+  481  kubectl get pods 
+  482  kubectl scale --replicas=10 rc helloworld-controller
+  483  kubectl get pods 
+  484  kubectl scale --replicas=1 rc helloworld-controller
+  485  ls
+  486  kubectl get pods 
+  487  kubectl delete pod helloworld-controller-kp44d
+  488  kubectl get pods 
+  489  kubectl get pods -o wide 
+  490  kubectl delete pod helloworld-controller-snmrz
+  491  kubectl get pods -o wide 
+  492  kubectl get pods 
+  493  ls
+  494  kubectl get rc 
+  495  kubectl scale --replicas=5 rc helloworld-controller
+  496  kubectl get pods 
+  497  kubectl delete rc helloworld-controller
+  498  kubectl get pods 
+  499  ls
+  500  cd ..
+  501  ls
+  502  cd ..
+  503  ls
+  504  history > Day2_History.txt 
