@@ -21,14 +21,21 @@ The following are typical use cases for Deployments:
 ## Creating a Deployment
 ```
 # cd k8s-docker-vmware-08-June-2020/02-K8s/
+```
 
+```
 # cat 04-Deployment/helloworld.yml
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: helloworld-deployment
+  labels:
+    app: helloworld
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: helloworld
   template:
     metadata:
       labels:
