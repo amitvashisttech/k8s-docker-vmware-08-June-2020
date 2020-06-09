@@ -8,13 +8,13 @@
 ## First clone this repository on your windows machine.
 
 ```
-git clone https://github.com/amitvashisttech/k8s-terraform-cgi-25May2020.git
+git clone https://github.com/amitvashisttech/k8s-docker-vmware-08-June-2020.git
 ``` 
 
 ## Now provision three virtual machines with following commands:
 
 ```
-cd k8s-terraform-cgi-25May2020/03-K8s/01-Setup/
+cd k8s-docker-vmware-08-June-2020/02-K8s/
 vagrant.exe up
 
 
