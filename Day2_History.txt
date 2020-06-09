@@ -1,0 +1,435 @@
+    1  sudo apt-get update; sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common -y 
+    2  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    3  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+    4     $(lsb_release -cs) \
+    5     stable"
+    6  sudo apt-get update
+    7  sudo apt-get install docker-ce docker-ce-cli containerd.io
+    8  docker version 
+    9  history 
+   10  git clone https://github.com/amitvashisttech/k8s-docker-vmware-08-June-2020.git
+   11  docker version
+   12  ls 
+   13  cd k8s-docker-vmware-08-June-2020/
+   14  ls
+   15  git pull 
+   16  ls
+   17  cd 01-Docker/
+   18  ls
+   19  01-Setup/
+   20  ls
+   21  cd 01-Setup/
+   22  ls
+   23  cat install-node.sh 
+   24  cd ..
+   25  ls
+   26  cd ..
+   27  ls
+   28  docker version 
+   29  cd 
+   30  docker images 
+   31  docker ps -a 
+   32  docker run ubuntu echo "Welcome to Docker"
+   33  docker images 
+   34  cd /var/lib/docker/
+   35  ls
+   36  docker ps 
+   37  docker ps -a
+   38  exit
+   39  sudo apt -get install
+   40  apt-get update
+   41  apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+   42  apt-key fingerprint 0EBFCD88
+   43  dd-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   44     $(lsb_release -cs) \
+   45     stable"
+   46  add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   47     $(lsb_release -cs) \
+   48     stable"
+   49  apt-get update
+   50  apt-get install docker-ce docker-ce-cli containerd.io
+   51  docker version
+   52  ls
+   53  git clone https://github.com/amitvashisttech/k8s-docker-vmware-08-June-2020.git 
+   54  docker
+   55  docker version
+   56  docker run ubuntu echo "Welcome to docker"
+   57  docker images
+   58  docker run ubuntu echo "Welcome to docker"
+   59  exit
+   60  ls
+   61  docker images
+   62  cd /var/lib/docker/
+   63  ls
+   64  cd image/
+   65  ls
+   66  cd overlay2/
+   67  ls
+   68  cat repositories.json 
+   69  ls
+   70  cd imagedb/
+   71  ls
+   72  cd content/
+   73  ls
+   74  cd sha256/
+   75  ls
+   76  cd ..
+   77  ls
+   78  cd ..
+   79  ls
+   80  cd ..
+   81  ls
+   82  cd 
+   83  ls
+   84  docker images 
+   85  docker run ubuntu:16.04 echo "Welcome to docker"
+   86  docker images 
+   87  docker pull centos:7 
+   88  docker images
+   89  history 
+   90  docker search ubuntu
+   91  history 
+   92  docker images 
+   93  docker ps 
+   94  docker ps -a
+   95  ls
+   96  docker run -it ubuntu:16.04
+   97  docker run -it centos/7
+   98  docker run -it centos:7
+   99  docker ps 
+  100  docker run -it ubuntu:16.04
+  101  docker ps 
+  102  docker ps -a
+  103  docker ps 
+  104  docker kill 71f5dbd7e7c3
+  105  docker ps 
+  106  ls
+  107  docker ps -a
+  108  docker ps 
+  109  docker ps -q
+  110  docker kill $(docker ps -q)
+  111  docker ps 
+  112  history 
+  113  ls
+  114  docker ps 
+  115  docker run -it centos:7
+  116  docker ps 
+  117  ip addr 
+  118  netstat -tulnp 
+  119  netstat -tulnp | grep -i http
+  120  docker ps 
+  121  docker inspect e7eb02064295
+  122  curl 172.17.0.2/info.html
+  123  docker inspect e7eb02064295
+  124  ip addr 
+  125  curl 172.17.0.2/info.html
+  126  docker ps 
+  127  docker run -it centos:7
+  128  docker ps 
+  129  docker attach eb8ec1794e49
+  130  docker attach e7eb02064295
+  131  curl 172.17.0.2/info.html
+  132  docker kill e7eb02064295
+  133  docker ps 
+  134  docker ps -a
+  135  docker start e7eb02064295
+  136  docker ps 
+  137  docker attach e7eb02064295
+  138  history 
+  139  ls
+  140  docker ps 
+  141  docker attach e7eb02064295
+  142  docker ps 
+  143  docker commit -p -m "My Apache" e7eb02064295 centos7-httpd-image:v1
+  144  docker ps 
+  145  docker images 
+  146  docker run -it centos7-httpd-image:v1 
+  147  docker ps 
+  148  docker inspect 52d4b258f4e2
+  149  curl 172.17.0.4
+  150  curl 172.17.0.4/info.html
+  151  docker run -itd centos7-httpd-image:v1 
+  152  docker ps 
+  153  curl 172.17.0.5/info.html
+  154  curl 172.17.0.4/info.html
+  155  docker run -itd centos7-httpd-image:v1 
+  156  docker ps 
+  157  docker run -itd --name myapache-node-1 centos7-httpd-image:v1 
+  158  docker run -itd --name myapache-node-2 centos7-httpd-image:v1 
+  159  docker ps 
+  160  docker inspect myapache-node-2
+  161  history 
+  162  docker run -itd --name myapache-node-2 centos7-httpd-image:v1 
+  163  docker ps 
+  164  docker attach 810822056b34
+  165  docker kill $(docker ps -q )
+  166  docker ps 
+  167  docker ps -a
+  168  docker rm $(docker ps -q )
+  169  docker rm $(docker ps -aq )
+  170  docker ps 
+  171  docker ps -a
+  172  docker images
+  173  ls
+  174  cd k8s-docker-vmware-08-June-2020/
+  175  ls
+  176  cd 01-Docker/
+  177  ls
+  178  mkdir 02-DockerFile/apache -p 
+  179  ls
+  180  cd 02-DockerFile/
+  181  ls
+  182  cd apache/
+  183  ls
+  184  vim Dockerfile
+  185  docker images 
+  186  docker build -t  ubuntu-apache-image:v1 -f Dockerfile .
+  187  docker images 
+  188  docker run -d ubuntu-apache-image:v1
+  189  docker ps 
+  190  docker inspect 53b93545ea15
+  191  curl 172.17.0.2
+  192  docker images 
+  193  docker run -d -p 80:80 ubuntu-apache-image:v1
+  194  docker images 
+  195  docker ps 
+  196  netstat -tulnp | grep -i http
+  197  netstat -tulnp | grep -i httpd
+  198  netstat -tulnp | grep -i 80
+  199  docker ps 
+  200  docker run -d -p 80:80 ubuntu-apache-image:v1
+  201  docker run -d -p 8080:80 ubuntu-apache-image:v1
+  202  docker run -d -p 8081:80 ubuntu-apache-image:v1
+  203  docker ps 
+  204  ls
+  205  docker
+  206  cd 
+  207  ls
+  208  docker images
+  209  docker history ubuntu-apache-image:v1 
+  210  docker inspect ubuntu-apache-image:v1 
+  211  ls
+  212  cd k8s-docker-vmware-08-June-2020/
+  213  ls
+  214  git add . ; git commit -m "DockerFile" ; git push 
+  215  ls
+  216  history > Day1_History.txt
+  217  git add . ; git commit -m "DockerFile" ; git push 
+  218  ls
+  219  cd 01-Docker/
+  220  ls
+  221  cd 
+  222  ls
+  223  cd ..
+  224  ls
+  225  cd 
+  226  ls
+  227  cd k8s-docker-vmware-08-June-2020/
+  228  ls
+  229  cd 01-Docker/
+  230  ls
+  231  cd 02-DockerFile/
+  232  ls
+  233  curl localhost:8080
+  234  ls
+  235  cp -rf apache apache_v2
+  236  ls
+  237  cd apache_v2/
+  238  ls
+  239  vim info.html
+  240  ls
+  241  vim Dockerfile 
+  242  ls
+  243  docker build -t  ubuntu-apache-image:v2 -f Dockerfile .
+  244  docker images
+  245  docker run -d -p 8082:80 ubuntu-apache-image:v2
+  246  docker ps 
+  247  docker run -d -P  ubuntu-apache-image:v2
+  248  docker ps 
+  249  docker run -d -P  ubuntu-apache-image:v1
+  250  docker ps 
+  251  ls
+  252  vi Dockerfile 
+  253  ls
+  254  vim info.html 
+  255  docker build -t  ubuntu-apache-image:v3 -f Dockerfile .
+  256  docker run -d -P  ubuntu-apache-image:v3
+  257  docker ps 
+  258  ls
+  259  cd ..
+  260  ls
+  261  cd ..
+  262  history > Day1_History.txt 
+  263  git add . ; git commit -m "DockerFile" ; git push 
+  264  ls
+  265  cd k8s-docker-vmware-08-June-2020/
+  266  ls
+  267  git pull
+  268  ls
+  269  cd 02-K8s/
+  270  ls
+  271  cd ..
+  272  ls
+  273  cd 02-K8s/
+  274  ls
+  275  cd 01-Setup/
+  276  ls
+  277  ip addr 
+  278  docker ps -q
+  279  docker kill $(docker ps -q)
+  280  docker rm $(docker ps -qa)
+  281  ip addr 
+  282  ls
+  283  vim install-kubernetes.sh 
+  284  ls
+  285  ./install-kubernetes.sh 
+  286  ls
+  287  docker ps 
+  288  netstat -tulnp | grep -i kubelet
+  289  ls
+  290  rm -rf /etc/kubernetes
+  291  ls
+  292  vim install-kubernetes.sh 
+  293  apt-get remove docker 
+  294  apt-get remove docker* 
+  295  ls
+  296  ./install-kubernetes.sh 
+  297  KUBECONFIG=/etc/kubernetes/admin.confKUBECONFIG=/etc/kubernetes/admin.conf
+  298  kubectl get nodes 
+  299  l
+  300  docker images 
+  301  ls
+  302  vim install-kubernetes.sh 
+  303  apt-get remove docker kubelet kubeadm kubectl -y 
+  304  ls
+  305  ip addr 
+  306  vim install-kubernetes.sh 
+  307  ./install-kubernetes.sh 
+  308  docker version 
+  309  ls
+  310  cat install-kubernetes.sh 
+  311  vim install-node.sh 
+  312  ls
+  313  cd ..
+  314  ls
+  315  cd ..
+  316  ls
+  317  git add . ; git commit -m "Update K8s Script for v1.18.0"; git push 
+  318  kubectl get nodes 
+  319  cd
+  320  mkdir -p $HOME/.kube
+  321  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  322  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  323  kubectl get nodes 
+  324  kubectl get pods 
+  325  kubectl get pods  -n kube-system
+  326  kubectl logs coredns-66bff467f8-sr528  -n kube-system
+  327  kubectl describe coredns-66bff467f8-sr528  -n kube-system
+  328  kubectl logs coredns-66bff467f8-sr528  -n kube-system
+  329  kubectl get pods  -n kube-system
+  330  kubectl describe  pods  coredns-66bff467f8-sr528 -n kube-system
+  331  kubectl  get nodes 
+  332  kubectl get pods 
+  333  kubectl get pods  -n kube-system
+  334  kubectl get nodes 
+  335  kubectl describe nodes ip-172-31-0-196
+  336  ls
+  337  kubectl describe nodes ip-172-31-0-196
+  338  ls
+  339  cd k8s-docker-vmware-08-June-2020/
+  340  kubectl get nodes 
+  341  ls
+  342  cd 02-K8s/
+  343  ls
+  344  cd 01-Setup/
+  345  ls
+  346  cat install-kubernetes.sh 
+  347  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+  348  kubectl get pods --all-namespaces
+  349  kubectl get nodes 
+  350  kubectl get pods --all-namespaces
+  351  ls
+  352  vim install-kubernetes.sh 
+  353  ls
+  354  cd ..
+  355  git add . ; git commit -m "Calico"; git push 
+  356  cd 
+  357  kubectl get nodes 
+  358  kubectl run docket-get-started --image=amitvashist7/get-started:part2 --port=80
+  359  kubectl get pods 
+  360  kubectl get svc 
+  361  kubectl get nodes -o wide 
+  362  kubectl get pod  -o wide 
+  363  ls
+  364  cd k8s-docker-vmware-08-June-2020/
+  365  ls
+  366  git config --list 
+  367  ls
+  368  cd 02-K8s/
+  369  ls
+  370  cd 01-Setup/
+  371  ls
+  372  ip addr 
+  373  ls
+  374  vim install-kubernetes.sh 
+  375  ls
+  376  rm 1
+  377  ls
+  378  kubectl get nodes 
+  379  kubectl clutser-info
+  380  kubectl cluster-info
+  381  kubectl versions
+  382  kubectl version
+  383  kubectl api-versions
+  384  kubectl api-resources
+  385  kubectl proxy --port=8080 &
+  386  curl http://localhost:8080
+  387  curl http://localhost:8080/api/
+  388  curl http://localhost:8080/apii/v1
+  389  curl http://localhost:8080/apii/v1/pods
+  390  curl http://localhost:8080/api/v1/pods
+  391  kubectl get pods -n kube-system
+  392  curl http://localhost:8080/api/v1/pods
+  393  curl http://localhost:8080/api/v1/
+  394  curl http://localhost:8080/a
+  395  curl http://localhost:8080/apis/apiextensions.k8s.io/v1beta1/
+  396  ls
+  397  kubectl get pods 
+  398  kubectl delete pod docket-get-started
+  399  kubectl get pods 
+  400  kubectl get pod -n kube-system
+  401  kubectl get pod -n kube-system -o wide 
+  402  cd 
+  403  ls
+  404  cat /etc/kubernetes/admin.conf 
+  405  kubectl config view
+  406  kubectl current-context
+  407  kubectl get current-context
+  408  kubectl current-context
+  409  kubectl config current-context
+  410  ls
+  411  cat /etc/kubernetes/admin.conf 
+  412  ls
+  413  cat .kube/config 
+  414  ls
+  415  cd k8s-docker-vmware-08-June-2020/
+  416  ls
+  417  git pull
+  418  ls
+  419  cd 02-K8s/
+  420  ls
+  421  cd 02-First-App/
+  422  ls
+  423  vim helloworld.yml 
+  424  kubectl create -f helloworld.yml 
+  425  kubectl get pods 
+  426  kubectl get pods -o wide 
+  427* kubectl describe pod nodehelloworld 
+  428  kubectl get pods -o wide 
+  429  kubectl get nodes 
+  430  history 
+  431  cd ..
+  432  ls
+  433  cd ..
+  434  ls
+  435  history > Day2_History.txt
