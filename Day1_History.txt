@@ -1,0 +1,262 @@
+    1  sudo apt-get update; sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common -y 
+    2  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    3  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+    4     $(lsb_release -cs) \
+    5     stable"
+    6  sudo apt-get update
+    7  sudo apt-get install docker-ce docker-ce-cli containerd.io
+    8  docker version 
+    9  history 
+   10  git clone https://github.com/amitvashisttech/k8s-docker-vmware-08-June-2020.git
+   11  docker version
+   12  ls 
+   13  cd k8s-docker-vmware-08-June-2020/
+   14  ls
+   15  git pull 
+   16  ls
+   17  cd 01-Docker/
+   18  ls
+   19  01-Setup/
+   20  ls
+   21  cd 01-Setup/
+   22  ls
+   23  cat install-node.sh 
+   24  cd ..
+   25  ls
+   26  cd ..
+   27  ls
+   28  docker version 
+   29  cd 
+   30  docker images 
+   31  docker ps -a 
+   32  docker run ubuntu echo "Welcome to Docker"
+   33  docker images 
+   34  cd /var/lib/docker/
+   35  ls
+   36  docker ps 
+   37  docker ps -a
+   38  exit
+   39  sudo apt -get install
+   40  apt-get update
+   41  apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+   42  apt-key fingerprint 0EBFCD88
+   43  dd-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   44     $(lsb_release -cs) \
+   45     stable"
+   46  add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   47     $(lsb_release -cs) \
+   48     stable"
+   49  apt-get update
+   50  apt-get install docker-ce docker-ce-cli containerd.io
+   51  docker version
+   52  ls
+   53  git clone https://github.com/amitvashisttech/k8s-docker-vmware-08-June-2020.git 
+   54  docker
+   55  docker version
+   56  docker run ubuntu echo "Welcome to docker"
+   57  docker images
+   58  docker run ubuntu echo "Welcome to docker"
+   59  exit
+   60  ls
+   61  docker images
+   62  cd /var/lib/docker/
+   63  ls
+   64  cd image/
+   65  ls
+   66  cd overlay2/
+   67  ls
+   68  cat repositories.json 
+   69  ls
+   70  cd imagedb/
+   71  ls
+   72  cd content/
+   73  ls
+   74  cd sha256/
+   75  ls
+   76  cd ..
+   77  ls
+   78  cd ..
+   79  ls
+   80  cd ..
+   81  ls
+   82  cd 
+   83  ls
+   84  docker images 
+   85  docker run ubuntu:16.04 echo "Welcome to docker"
+   86  docker images 
+   87  docker pull centos:7 
+   88  docker images
+   89  history 
+   90  docker search ubuntu
+   91  history 
+   92  docker images 
+   93  docker ps 
+   94  docker ps -a
+   95  ls
+   96  docker run -it ubuntu:16.04
+   97  docker run -it centos/7
+   98  docker run -it centos:7
+   99  docker ps 
+  100  docker run -it ubuntu:16.04
+  101  docker ps 
+  102  docker ps -a
+  103  docker ps 
+  104  docker kill 71f5dbd7e7c3
+  105  docker ps 
+  106  ls
+  107  docker ps -a
+  108  docker ps 
+  109  docker ps -q
+  110  docker kill $(docker ps -q)
+  111  docker ps 
+  112  history 
+  113  ls
+  114  docker ps 
+  115  docker run -it centos:7
+  116  docker ps 
+  117  ip addr 
+  118  netstat -tulnp 
+  119  netstat -tulnp | grep -i http
+  120  docker ps 
+  121  docker inspect e7eb02064295
+  122  curl 172.17.0.2/info.html
+  123  docker inspect e7eb02064295
+  124  ip addr 
+  125  curl 172.17.0.2/info.html
+  126  docker ps 
+  127  docker run -it centos:7
+  128  docker ps 
+  129  docker attach eb8ec1794e49
+  130  docker attach e7eb02064295
+  131  curl 172.17.0.2/info.html
+  132  docker kill e7eb02064295
+  133  docker ps 
+  134  docker ps -a
+  135  docker start e7eb02064295
+  136  docker ps 
+  137  docker attach e7eb02064295
+  138  history 
+  139  ls
+  140  docker ps 
+  141  docker attach e7eb02064295
+  142  docker ps 
+  143  docker commit -p -m "My Apache" e7eb02064295 centos7-httpd-image:v1
+  144  docker ps 
+  145  docker images 
+  146  docker run -it centos7-httpd-image:v1 
+  147  docker ps 
+  148  docker inspect 52d4b258f4e2
+  149  curl 172.17.0.4
+  150  curl 172.17.0.4/info.html
+  151  docker run -itd centos7-httpd-image:v1 
+  152  docker ps 
+  153  curl 172.17.0.5/info.html
+  154  curl 172.17.0.4/info.html
+  155  docker run -itd centos7-httpd-image:v1 
+  156  docker ps 
+  157  docker run -itd --name myapache-node-1 centos7-httpd-image:v1 
+  158  docker run -itd --name myapache-node-2 centos7-httpd-image:v1 
+  159  docker ps 
+  160  docker inspect myapache-node-2
+  161  history 
+  162  docker run -itd --name myapache-node-2 centos7-httpd-image:v1 
+  163  docker ps 
+  164  docker attach 810822056b34
+  165  docker kill $(docker ps -q )
+  166  docker ps 
+  167  docker ps -a
+  168  docker rm $(docker ps -q )
+  169  docker rm $(docker ps -aq )
+  170  docker ps 
+  171  docker ps -a
+  172  docker images
+  173  ls
+  174  cd k8s-docker-vmware-08-June-2020/
+  175  ls
+  176  cd 01-Docker/
+  177  ls
+  178  mkdir 02-DockerFile/apache -p 
+  179  ls
+  180  cd 02-DockerFile/
+  181  ls
+  182  cd apache/
+  183  ls
+  184  vim Dockerfile
+  185  docker images 
+  186  docker build -t  ubuntu-apache-image:v1 -f Dockerfile .
+  187  docker images 
+  188  docker run -d ubuntu-apache-image:v1
+  189  docker ps 
+  190  docker inspect 53b93545ea15
+  191  curl 172.17.0.2
+  192  docker images 
+  193  docker run -d -p 80:80 ubuntu-apache-image:v1
+  194  docker images 
+  195  docker ps 
+  196  netstat -tulnp | grep -i http
+  197  netstat -tulnp | grep -i httpd
+  198  netstat -tulnp | grep -i 80
+  199  docker ps 
+  200  docker run -d -p 80:80 ubuntu-apache-image:v1
+  201  docker run -d -p 8080:80 ubuntu-apache-image:v1
+  202  docker run -d -p 8081:80 ubuntu-apache-image:v1
+  203  docker ps 
+  204  ls
+  205  docker
+  206  cd 
+  207  ls
+  208  docker images
+  209  docker history ubuntu-apache-image:v1 
+  210  docker inspect ubuntu-apache-image:v1 
+  211  ls
+  212  cd k8s-docker-vmware-08-June-2020/
+  213  ls
+  214  git add . ; git commit -m "DockerFile" ; git push 
+  215  ls
+  216  history > Day1_History.txt
+  217  git add . ; git commit -m "DockerFile" ; git push 
+  218  ls
+  219  cd 01-Docker/
+  220  ls
+  221  cd 
+  222  ls
+  223  cd ..
+  224  ls
+  225  cd 
+  226  ls
+  227  cd k8s-docker-vmware-08-June-2020/
+  228  ls
+  229  cd 01-Docker/
+  230  ls
+  231  cd 02-DockerFile/
+  232  ls
+  233  curl localhost:8080
+  234  ls
+  235  cp -rf apache apache_v2
+  236  ls
+  237  cd apache_v2/
+  238  ls
+  239  vim info.html
+  240  ls
+  241  vim Dockerfile 
+  242  ls
+  243  docker build -t  ubuntu-apache-image:v2 -f Dockerfile .
+  244  docker images
+  245  docker run -d -p 8082:80 ubuntu-apache-image:v2
+  246  docker ps 
+  247  docker run -d -P  ubuntu-apache-image:v2
+  248  docker ps 
+  249  docker run -d -P  ubuntu-apache-image:v1
+  250  docker ps 
+  251  ls
+  252  vi Dockerfile 
+  253  ls
+  254  vim info.html 
+  255  docker build -t  ubuntu-apache-image:v3 -f Dockerfile .
+  256  docker run -d -P  ubuntu-apache-image:v3
+  257  docker ps 
+  258  ls
+  259  cd ..
+  260  ls
+  261  cd ..
+  262  history > Day1_History.txt 
