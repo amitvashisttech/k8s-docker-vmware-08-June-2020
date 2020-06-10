@@ -502,3 +502,88 @@
   502  cd ..
   503  ls
   504  history > Day2_History.txt 
+  505  ls
+  506  git add . ; git commit -m "First Pod"; git push 
+  507  kubectl get pods 
+  508  kubectl scale --replicas=5 rc helloworld-controller
+  509  ls
+  510  git pull
+  511  ls
+  512  cd 02-K8s/
+  513  ls
+  514  cd 04-Deployment/
+  515  ls
+  516  cat helloworld.yml 
+  517  ls
+  518  kubectl create -f helloworld.yml 
+  519  kubectl run hello-world --image=busybox --dry-run
+  520  kubectl run --help
+  521  vim helloworld.yml 
+  522  kubectl create -f helloworld.yml 
+  523  kubectl proxy --port=8080 &
+  524  vim helloworld.yml 
+  525  kubectl create -f helloworld.yml 
+  526  vi helloworld.yml 
+  527  kubectl create -f helloworld.yml 
+  528  kubectl get deployment
+  529  kubectl get rs
+  530  kubectl get pods 
+  531  kubectl delete pod helloworld-deployment-78cf6987f9-2xdc2 helloworld-deployment-78cf6987f9-jczlw
+  532  kubectl get pods 
+  533  kubectl scale --replicas=5 deployment helloworld-deployment
+  534  kubectl get pods 
+  535  ls
+  536  kubectl get pods 
+  537  kubectl get pods -o wide
+  538  kubectl get ps
+  539  kubectl get pods 
+  540  kubectl get deployment 
+  541  kubectl expose deployment helloworld-deployment --type=NodePort
+  542  kubectl get svc 
+  543  kubectl delete svc docket-get-started
+  544  ls
+  545  kubectl get svc 
+  546  kubectl describe svc helloworld-deployment
+  547  kubectl get pods -o wide 
+  548  kubectl get pods 
+  549  kubectl delete pod nodehelloworld ubuntu-test ubuntu-test-1 
+  550  kubectl get pods
+  551  kubectl describe svc helloworld-deployment
+  552  kubectl scale --replicas=2 deployment helloworld-deployment
+  553  kubectl get pods
+  554  kubectl describe svc helloworld-deployment
+  555  kubectl get svc 
+  556  kubectl set image deployment helloworld-deployment k8s-demo=amitvashist7/k8s-tiny-web:2
+  557  kubectl get pods
+  558  kubectl get svc 
+  559  kubectl describe svc helloworld-deployment
+  560  kubectl scale --replicas=4 deployment helloworld-deployment
+  561  kubectl get svc 
+  562  kubectl describe svc helloworld-deployment
+  563  kubectl set image deployment helloworld-deployment k8s-demo=amitvashist7/k8s-tiny-web:3 --record
+  564  kubectl get svc 
+  565  kubectl get pods
+  566  kubectl get rs 
+  567  kubectl get pods
+  568  kubectl rollout undo deployment helloworld-deployment
+  569  kubectl get rs 
+  570  kubectl get pods
+  571  kubectl rollout history deployment helloworld-deployment
+  572  kubectl rollout history deployment helloworld-deployment --revision=1
+  573  kubectl rollout history deployment helloworld-deployment --revision=3
+  574  kubectl rollout history deployment helloworld-deployment --revision=4
+  575  kubectl rollout status deployment helloworld-deployment
+  576  kubectl scale --replicas=10 deployment helloworld-deployment
+  577  kubectl get pods
+  578  kubectl set image deployment helloworld-deployment k8s-demo=amitvashist7/k8s-tiny-web:4 --record
+  579  kubectl rollout status deployment helloworld-deployment
+  580  kubectl rollout history deployment helloworld-deployment
+  581  kubectl rollout undo deployment helloworld-deployment
+  582  kubectl rollout history deployment helloworld-deployment --revision=1
+  583  kubectl rollout undo deployment helloworld-deployment --to-revision=1
+  584  ls
+  585  cd ..
+  586  ls
+  587  cd ..
+  588  ls
+  589  history > Day2_History.txt 
