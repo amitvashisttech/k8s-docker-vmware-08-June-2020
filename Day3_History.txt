@@ -855,3 +855,97 @@
   855  cd ..
   856  ls
   857  history > Day3_History.txt 
+  858  git add . ; git commit -m "07-Labels"; git push 
+  859  history 
+  860  ls
+  861  kubectl get pods 
+  862  kubectl delete -f 02-K8s/07-Labels/
+  863  ls
+  864  cd 02-K8s/
+  865  ls
+  866  cd 07-Labels/
+  867  kubectl create -f helloworld-nodeselector-1.yaml 
+  868  kubectl get pods 
+  869  kubectl describe pod helloworld-deployment-57986b947d-p44gr
+  870  ls
+  871  cat helloworld-nodeselector-1.yaml 
+  872  ls
+  873  cd ..
+  874  ls
+  875  git pull
+  876  ls
+  877  cd 08-HealthCheck/
+  878  ls
+  879  cat helloworld-healthcheck.yml 
+  880  kubectl create -f helloworld-healthcheck.yml 
+  881  kubectl get deployments 
+  882  kubectl delete deploy --all
+  883  kubectl create -f helloworld-healthcheck.yml 
+  884  kubectl get deply
+  885  kubectl get deplot
+  886  kubectl get deploy
+  887  kubectl get pods 
+  888  kubectl describe pod helloworld-deployment-585fb455cb-btp4v
+  889  kubectl get pods 
+  890  kubectl exec -it helloworld-deployment-585fb455cb-m92t5 -- sh 
+  891  vi /etc/hosts
+  892  kubectl get nodes -o wide 
+  893  kubectl get nodes -o wide | awk -F " " '{print $1}'
+  894  kubectl get nodes -o wide | awk -F " " '{print $1}' >> /etc/hosts
+  895  vi /etc/hosts
+  896  kubectl get nodes -o wide | awk -F " " '{print $1}'
+  897  ping ip-172-31-0-196
+  898  nslookup ip-172-31-0-196
+  899  kubectl exec -it helloworld-deployment-585fb455cb-m92t5 -- sh 
+  900  kubectl run -i --tty busybox-1 --image=busybox:1.28 --restart=Never -- sh
+  901  kubectl edit deploy helloworld-deployment
+  902  kubectl get pods 
+  903  kubectl delete pod busybox-1
+  904  kubectl get pods 
+  905  kubectl describe pod helloworld-deployment-85f99c955-2pbst
+  906  kubectl get pods 
+  907  kubectl edit deploy helloworld-deployment
+  908  kubectl get pods 
+  909  history 
+  910  kubectl run -i --tty busybox-1 --image=busybox:1.28 --restart=Never -- sh
+  911  kubectl run -i --tty centos-1 --image=centos:7 --restart=Never -- bash
+  912  cd ..
+  913  ls
+  914  cd ..
+  915  ls
+  916  history > Day3_History.txt 
+  917  ls
+  918  git add . ; git commit -m "08-HealthCheck" ; git push
+  919  history > Day3_History.txt 
+  920  git add .
+  921  git status 
+  922  git add . ; git commit -m "08-HealthCheck" ; git push
+  923  ls
+  924  cat Day3_History.txt 
+  925  git pull
+  926  history >>  Day3_History.txt 
+  927  git add . ; git commit -m "08-HealthCheck" ; git push
+  928  git status 
+  929  git config --list 
+  930  cd ..
+  931  ls
+  932  rm -rf k8s-docker-vmware-08-June-2020/
+  933  git clone https://github.com/amitvashisttech/k8s-docker-vmware-08-June-2020.git
+  934  ls
+  935  cd k8s-docker-vmware-08-June-2020/
+  936  ls
+  937  kubectl delete -f 02-K8s/08-HealthCheck/helloworld-healthcheck.yml 
+  938  kubectl create  -f 02-K8s/08-HealthCheck/pod-prob-exec.yaml
+  939  kubectl get pods 
+  940  kubectl delete pod busybox-1 centos-1
+  941  kubectl get pods 
+  942  ls
+  943  cat 02-K8s/08-HealthCheck/pod-prob-exec.yaml 
+  944  kubectl get pods 
+  945  kubectl describe pod liveness-exec
+  946  kubectl get pods 
+  947  cd ..
+  948  ls
+  949  cd k8s-docker-vmware-08-June-2020/
+  950  ls
+  951  history > Day3_History.txt 
