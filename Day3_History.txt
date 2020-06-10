@@ -1,38 +1,3 @@
-    1  sudo apt-get update; sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common -y 
-    2  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    3  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-    4     $(lsb_release -cs) \
-    5     stable"
-    6  sudo apt-get update
-    7  sudo apt-get install docker-ce docker-ce-cli containerd.io
-    8  docker version 
-    9  history 
-   10  git clone https://github.com/amitvashisttech/k8s-docker-vmware-08-June-2020.git
-   11  docker version
-   12  ls 
-   13  cd k8s-docker-vmware-08-June-2020/
-   14  ls
-   15  git pull 
-   16  ls
-   17  cd 01-Docker/
-   18  ls
-   19  01-Setup/
-   20  ls
-   21  cd 01-Setup/
-   22  ls
-   23  cat install-node.sh 
-   24  cd ..
-   25  ls
-   26  cd ..
-   27  ls
-   28  docker version 
-   29  cd 
-   30  docker images 
-   31  docker ps -a 
-   32  docker run ubuntu echo "Welcome to Docker"
-   33  docker images 
-   34  cd /var/lib/docker/
-   35  ls
    36  docker ps 
    37  docker ps -a
    38  exit
@@ -949,3 +914,87 @@
   949  cd k8s-docker-vmware-08-June-2020/
   950  ls
   951  history > Day3_History.txt 
+  952  git add . ; git commit -m "08-HealthCheck" ; git push
+  953  git status 
+  954  cat Day2_History.txt 
+  955  history 
+  956  cat Day3_History.txt 
+  957  ls
+  958  git status 
+  959  git add . ; git commit -m "08-HealthCheck" 
+  960  git config --global user.email "amitvashist7@gmail.com"
+  961  git config --global user.name "Amit Vashist"
+  962  git add . ; git commit -m "08-HealthCheck" 
+  963  git add . ; git commit -m "08-HealthCheck" ; git push
+  964  ls
+  965  git pull
+  966  ls
+  967  cd 02-K8s/09-Secrets/
+  968  ls
+  969  cat helloworld-secrets.yml 
+  970  kubectl get deploy 
+  971  kubectl get pod 
+  972  ls
+  973  kubectl get secrets
+  974  kubectl create -f helloworld-secrets.yml 
+  975  kubectl get secrets
+  976  kubectl describe  secrets db-secrets
+  977  ls
+  978  vim helloworld-secrets-volumes.yml 
+  979  kubectl create -f helloworld-secrets-volumes.yml 
+  980  kubectl get pods 
+  981  kubectl describe pods helloworld-deployment-6bb4d96fc8-5x84d
+  982  kubectl get pods 
+  983  kubectl exec -it helloworld-deployment-6bb4d96fc8-5x84d -- sh 
+  984  kubectl describe  secrets db-secrets
+  985  kubectl edit  secrets db-secrets
+  986  echo  -n 'amitvashist' | base64 
+  987  kubectl edit  secrets db-secrets
+  988  echo  -n 'kube@432!' | base64 
+  989  kubectl edit  secrets db-secrets
+  990  kubectl exec -it helloworld-deployment-6bb4d96fc8-5x84d -- sh 
+  991  ls
+  992  cd ..
+  993  ls
+  994  kubectl get deploy 
+  995  kubectl edit deploy helloworld-deployment
+  996  kubectl get pods 
+  997  kubectl exec -it helloworld-deployment-7597b8cfd-89fn6 -- sh 
+  998  ls
+  999  kubectl delete -f 09-Secrets/
+ 1000  ls
+ 1001  git pull 
+ 1002  ls
+ 1003  cd 09-Secrets/
+ 1004  ls
+ 1005  cat helloworld-secrets.yml 
+ 1006  cat helloworld-secrets-volumes.yml 
+ 1007  ls
+ 1008  git status
+ 1009  git add . ; git commit -m "10-Secrets" ; git push
+ 1010  ls
+ 1011  cd ..
+ 1012  ls
+ 1013  cd 10-Wordpress/
+ 1014  ls
+ 1015  vim wordpress-single-deployment-no-volumes.yml 
+ 1016  ls
+ 1017  cat wordpress-secrets.yml 
+ 1018  cat wordpress-service.yml 
+ 1019  ls
+ 1020  cat wordpress-single-deployment-no-volumes.yml 
+ 1021  ls
+ 1022  cd ..
+ 1023  ls
+ 1024  kubectl craete -f 10-Wordpress/
+ 1025  kubectl create -f 10-Wordpress/
+ 1026  kubectl get svc,deployment,pods 
+ 1027  kubectl describe  pod/wordpress-deployment-7d4896594c-t88t7
+ 1028  kubectl get pods 
+ 1029  kubectl get svc 
+ 1030  kubectl get pods 
+ 1031  kubectl exec -it wordpress-deployment-7d4896594c-t88t7 -c mysql -- mysql -u root -p 
+ 1032  ls
+ 1033  cd ..
+ 1034  l
+ 1035  history >  Day3_History.txt 
