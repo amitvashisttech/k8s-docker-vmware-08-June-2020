@@ -1,13 +1,18 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld-deployment
+  name: helloworld-deployment-2
+  labels:
+    app: helloworld-2
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: helloworld-2
   template:
     metadata:
       labels:
-        app: helloworld
+        app: helloworld-2
     spec:
       containers:
       - name: k8s-demo
@@ -17,3 +22,4 @@ spec:
           containerPort: 80
       nodeSelector:
         hardware: virtual
+        env: prod
